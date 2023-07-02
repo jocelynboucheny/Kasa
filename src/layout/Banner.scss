@@ -1,0 +1,25 @@
+@use "../scss/variables.scss" as *;
+
+.banner {
+    position:relative;
+    max-width: 100%;
+    padding-inline: 2rem;
+    background-image: url("IMG.png");
+    min-height: 140px;
+    margin: auto;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+    color: $color-tertiary;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2rem;    
+}
+
+.banner::before{
+    position:absolute;
+    border-radius: 2rem;
+    content:"";
+    inset: 0;
+    opacity: 0,5;
+}
