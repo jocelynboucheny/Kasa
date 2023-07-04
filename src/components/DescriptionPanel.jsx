@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DescriptionPanel.scss";
+import  arrow from "/arrow.png";
 
 export function DescriptionPanel({ title, content }) {
   const [isContentVisible, setIsContentVisible] = useState(false);
@@ -8,12 +9,18 @@ export function DescriptionPanel({ title, content }) {
   };
   const contentClass =
     (isContentVisible ? "visible" : "hidden") + " description__content";
-
+  
   return (
     <div className="description__panel">
       <p className="description__header">
         <span>{title}</span>
-        <i className="fa-solid fa-chevron-up" onClick={showContent}></i>
+        {/* <i className={isContentVisible ? "fa-solid fa-chevron-up " : "fa-solid fa-chevron-down"} onClick={showContent}></i> */}
+        <img 
+             className={isContentVisible ? 'arrow arrow_up' : 'arrow arrow_down'}
+             onClick={showContent} 
+              src={arrow} 
+              alt="show content" 
+        />
       </p>
       <p className={contentClass}>{content}</p>
     </div>

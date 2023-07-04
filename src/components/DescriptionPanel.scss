@@ -15,10 +15,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    i{
-        font-size: 2rem;
-        cursor: pointer;
+    // i{
+    //     font-size: 2rem;
+    //     cursor: pointer;
+    // }
+    .arrow{
+        transition: all 0.2s ease-in-out;
     }
+    .arrow_up{
+        transform: rotate(0deg);
+    }
+    .arrow_down{
+        transform: rotate(180deg);
+    }
+    
     }
     .description__content{
         background-color: $background-light;
