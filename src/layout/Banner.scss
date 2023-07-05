@@ -1,25 +1,27 @@
 @use "../scss/variables.scss" as *;
 
 .banner {
-    position:relative;
-    max-width: 100%;
-    padding-inline: 2rem;
-    background-image: url("IMG.png");
-    min-height: 140px;
-    margin: auto;
-    border-radius: 2rem;
-    display: grid;
-    place-items: center;
+  position: relative;
+  max-width: 100%;
+  padding-inline: 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("IMG.png");
+  min-height: 223px;
+  margin: auto;
+  border-radius: 2rem;
+  display: grid;
+  place-items: center;
+  color: $color-tertiary;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+  &_about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("IMG2.png");
+  }
+  p {
     color: $color-tertiary;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 2rem;    
-}
-
-.banner::before{
-    position:absolute;
-    border-radius: 2rem;
-    content:"";
-    inset: 0;
-    opacity: 0,5;
+    font-size: clamp(20px, 4vw, 48px);
+    font-weight: 500;
+  }
 }

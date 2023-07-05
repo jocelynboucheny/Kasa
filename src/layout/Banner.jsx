@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./Banner.scss";
 
-function Banner() {
+function Banner({title, classImg}) {
   return (
-    <div className="banner">
-        {/* <img src="https://unsplash.it/800/200" alt="banner" /> */}
-        <h2>Chez vous, partout et ailleurs</h2>
+    <div className={classImg ? "banner " + classImg : "banner"}>
+      {title && <p>{title}</p>}
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;
